@@ -7,25 +7,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// mongodb+srv://backend:*****@cluster0.0zhceau.mongodb.net/
+
 
 mongoose.connect(
-  "mongodb+srv://backend:backend123@cluster0.0zhceau.mongodb.net/mern?retryWrites=true&w=majority&appName=Cluster0"
+  "mongodb+srv://backend:###########@cluster0.0zhceau.mongodb.net/mern?retryWrites=true&w=majority&appName=Cluster0"
 );
 
 app.listen(3001, () => {
   console.log("Server is running");
 });
 
-// app.get("/getUsers", (req, res) => {
-//   UserModel.find({})
-//     .then(function (users) {
-//       res.json(users);
-//     })
-//     .catch(function (err) {
-//       res.json(err);
-//     });
-// });
 
 app.get("/getUsers", async (req, res) => {
   try {
@@ -38,12 +29,6 @@ app.get("/getUsers", async (req, res) => {
   }
 });
 
-// app.post("/createUser", async (req, res) => {
-//   const user = req.body;
-//   const newUser = new UserModel(user);
-//   await newUser.save();
-//   res.json(user);
-// });
 
 app.post("/createUser", async (req, res) => {
   try {

@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+}
+h1 {
+  text-align: center;
+  margin-top: 5vh;
+}
+.form-control {
+  width: 50vb;
+}
+button{
+  margin-top: 2vh;
+  width: 30vb;
+  
+}

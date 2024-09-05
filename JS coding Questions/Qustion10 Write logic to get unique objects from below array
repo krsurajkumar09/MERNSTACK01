@@ -1,0 +1,19 @@
+const arr = [
+  { name: "sai" },
+  { name: "Nang" },
+  { name: "sai" },
+  { name: "Nang" },
+  { name: "111111" },
+];
+
+function giveUniqueNameArray() {
+  // Extract unique names using a Set
+  const uniqueNames = [...new Set(arr.map((student) => student.name))];
+
+  // Create a new array with unique name objects
+  const uniqueArr = uniqueNames.map((name) => ({ name }));
+
+  return uniqueArr;
+}
+
+console.log(giveUniqueNameArray());
